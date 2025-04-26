@@ -1,0 +1,162 @@
+.Contenedor
+{
+	width:100%;
+	height:100%;
+	color:#990000
+}
+
+.Cabecera
+{
+	width:980px;
+	height:105px;
+	background-image:url(imagenes/banner.png);
+}
+
+.Cuerpo
+{	
+	width:980px;
+	height:450px;
+	background-image:url(imagenes/margen.png);
+}
+
+.Contenido
+{
+	width:980px;
+	height:425px;
+}
+
+.Hueco1
+{
+	width:300px;
+	height:425px;
+	float:left;
+}
+
+.Hueco11
+{
+	width:225px;
+	height:437px;
+	float:left;
+}
+
+.Centro1
+{
+	width:380px;
+	height:425px;
+	float:left;
+}
+
+.Hueco2
+{
+	width:380px;
+	height:149px;
+}
+.Centro2
+{
+	width:380px;
+	height:100px;
+	background-color:#daf6ff;
+	
+}
+
+.Hueco3
+{	
+	width:40px;
+	height:125px;
+	float:left;
+}
+
+.Centro3
+{
+	width:300px;
+	height:125;
+	float:left;
+}
+
+.Espacio
+{	
+	height="5px";
+}
+
+.Casilla
+{
+	width:300px; 
+	height:14px;
+	text-align:left;
+	color:#00CCFF
+}
+
+.LetraCasilla
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+.Boton
+{
+	width:300px;
+	height:14px;
+	text-align:center;
+	
+}
+
+.Pie
+{
+	width:980px;
+	height:25px;
+	background-image:url(imagenes/foot.png);
+	float:right;
+}
+
+.Menu
+{
+	width:125px;
+	height:25px; 
+	background-image:url(imagenes/menu.png);
+	float:left;
+	margin-left:3px;
+	margin-top:10px;
+
+	
+}
+
+.LetraMenu
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#4949e0;
+	text-align:center;	
+}
+
+
+.Contenido2
+{
+	width:835px;
+	height:425px;
+	background-color:#daf6ff;
+	float:left;
+	margin-top:10px;
+}
+
+.Hueco22
+{
+	width:380px;
+	height:75px;
+}
+
+.Centro22
+{
+	height:285px;
+	width:380px;
+	background-color:#ffffff;
+}
+
+.TamBloque
+{
+	size:32px;
+}
+
+.Tabla
+{
+	margin-left:55px;
+}

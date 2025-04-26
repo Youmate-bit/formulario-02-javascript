@@ -1,0 +1,225 @@
+<!-José Sánchez
+16.179.270->
+<html>
+	<head>
+		<title>
+		      Laboratorio 03 - Formulario.html 
+
+		</title>
+		<link href="estilo.css" rel="stylesheet" type="text/css">
+		
+		<script language="JavaScript">
+			function Validar()
+			{
+				with (document.formulario)
+				if ((Nombres.value=="") || (Apellidos.value=="") || (Cedula.value=="") || (Email.value=="") || (Clave.value=="") || (Reclave.value==""))
+				{
+					alert("Debe llenar todos los campos");
+					return false;
+				}
+				else
+				{
+					if (!(Nacionalidad.options[1].selected || Nacionalidad.options[2].selected))
+					{
+						alert("Debe seleccionar una nacionalidad")
+						return false
+					}
+					if (!(Sexo[0].checked || Sexo[1].checked))
+					{
+						alert("Debe seleccionar un sexo")
+						return false
+					}
+					else
+					{
+						nom = Nombres.value
+						nom1 = nom.charAt(0)
+						apell = Apellidos.value
+						apell1 = apell.charAt(0)
+						if ((nom1.toUpperCase() != nom.charAt(0)) || (apell1.toUpperCase() != apell.charAt(0)))
+						{
+							alert("Los campos Nombres y Apellidos deben comenzar con mayuscula")
+							return false
+						}
+						else
+						{
+							nom1 = nom.substr(1,nom.length)
+							apell1 = apell.substr(1, apell.length)
+							if ((nom1.toLowerCase() != nom.substr(1, nom.length)) || (apell1.toLowerCase() != apell.substr(1, apell.length)))
+							{
+								alert("Los campos Nombres y Apellidos deben contener minusculas en su cuerpo (exceptuando la primera letra)")
+								return false
+							}
+							else
+							{
+								var numeros = "0123456789"
+								ced = Cedula.value
+								valido=true
+								for (n=0;n<ced.length;n++)
+								{
+									if(numeros.indexOf(ced.charAt(n))==-1)
+									{valido=false; break;}
+								}
+								if(!valido)
+								{
+									alert("El campo Cedula debe contener solo numeros")
+									return false
+								}
+								else
+								{
+									mail = Email.value
+									if((mail.indexOf("@")==-1)||(mail.indexOf(".")==-1))
+									{
+										alert("El campo E-mail debe contener un caracter '@' y al menos un caracter '.'")
+										return false
+									}
+									else
+									{
+										if ((mail.indexOf("@")!=mail.lastIndexOf("@"))||(mail.indexOf(".")<(mail.indexOf("@")+2)))
+										{
+											alert("El campo E-mail debe contener un solo carácter ‘@’ y luego de este debe haber al menos un punto ‘.’. Ej: kathleensioux@gmail.com")
+											return false
+										}
+										else
+										{
+											if(Clave.value!=Reclave.value)
+											{
+												alert("Los campos Password y Re-Password deben ser iguales")
+												return false
+											}
+											else
+											{
+												alert("Envio exitoso de datos!")
+												return true
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					
+				}
+			}
+		
+		</script>
+	</head>
+	
+	<body >
+		<div class="Contenedor">
+			<div class="Cabecera">
+			</div>
+		
+			<div class="Cuerpo">
+				<div class="Menu">
+					<table width="98%">
+					<tr>
+						<td class="LetraMenu">Registrate</td>
+					</tr>
+					</table>
+				</div>
+				<div class="Contenido2">
+					<div class="Hueco11">
+					</div>
+					<div class="Centro1">
+						<div class="Hueco22">
+						</div>
+						<div class="Centro22">
+							<form name="formulario" method="post" onSubmit="return Validar()">
+							<table width="70%" class="Tabla">
+								<tr class="Casilla">
+									<td>
+										<strong class="LetraCasilla">Nombres:</strong>
+									</td>
+									<td>
+										<input name="Nombres" type="text" class="TamBloque">
+									</td>
+								</tr>
+								<tr class="Casilla">
+									<td>
+										<strong class="LetraCasilla">Apellidos:</strong>
+									</td>
+									<td>
+										<input name="Apellidos" type="text" class="TamBloque">
+									</td>
+								</tr>
+								<tr class="Casilla">
+									<td>
+										<strong class="LetraCasilla">Cedula:</strong>
+									</td>
+									<td>
+										<input name="Cedula" type="text" class="TamBloque">
+									</td>
+								</tr>
+								<tr class="Casilla">
+									<td>
+										<strong class="LetraCasilla">Nacionalidad:</strong>
+									</td>
+									<td>
+										<select name="Nacionalidad" class="TamBloque"/>
+											<option> Seleccione </option>
+											<option> Venezolana </option>
+											<option> Colombiana </option>
+										</select>
+									</td>
+								</tr>
+								<tr class="Casilla">
+									<td>
+										<strong class="LetraCasilla">Sexo:</strong>
+									</td>
+									<td class="LetraCasilla">
+										<input name="Sexo" type="radio" value="Femenino"/> F
+										<input name="Sexo" type="radio" value="Masculino"/> M
+									</td> 
+								</tr>
+								<tr class="Casilla">
+									<td>
+										<strong class="LetraCasilla">E-mail:</strong>
+									</td>
+									<td>
+										<input name="Email" type="text" class="TamBloque">
+									</td>
+								</tr>
+								<tr class="Casilla">
+									<td>
+										<strong class="LetraCasilla">Password:</strong>
+									</td>
+									<td>
+										<input name="Clave" name="contrasena" type="password" class="TamBloque">
+									</td>
+								</tr>
+								<tr class="Casilla">
+									<td>
+										<strong class="LetraCasilla">Re-Password:</strong>
+									</td>
+									<td>
+										<input name="Reclave" type="password" class="TamBloque">
+									</td>
+								</tr>
+								<tr class="Casilla">
+									<td colspan="2">
+									
+									</td>
+								</tr>
+								<tr class="Casilla">
+									<td align="right" width="50%">
+										<input type="submit" value="Enviar">
+									</td>
+									<td align="left">
+										<input type="reset" value="Limpiar">
+									</td>
+								</tr>	
+							</table>
+							</form>
+						</div>
+						<div class="Hueco22">
+						</div>
+					</div>
+					<div class="Hueco11">
+					</div>
+				</div>
+				<div class="Pie" >
+				</div>
+			</div>
+		</div>	
+	</body>
+</html>

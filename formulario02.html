@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="validacion02.js">  
+</script>
+<title>Documento sin título</title>
+</head>
+
+<body>
+<form  id="form1" name="form1" method="post" action="procesar.php">
+  <table bgcolor="#999999" bordercolor="#000000" width="433" height="368" border="1">
+    <tr>
+      <td width="97"><strong>Nombre</strong></td>
+      <td align="center" width="300"><input type="text" name="nombre" id="nombre" /></td>
+    </tr>
+    <tr>
+      <td><strong>Apellido</strong></td>
+      <td align="center"><input type="text" name="apellido" id="apellido" /></td>
+    </tr>
+    <tr>
+      <td><strong>Cedula</strong></td>
+      <td align="center"><input type="text" name="cedula" id="cedula" /></td>
+    </tr>
+    <tr>
+      <td><strong>Direccion</strong></td>
+      <td align="center"><textarea name="direccion" id="direccion" cols="45" rows="5"></textarea></td>
+    </tr>
+    <tr>
+      <td><strong>Sexo</strong></td>
+      <td><strong>M
+        <input type="radio" name="sexo" id="radio" value="Masculino" />
+        F
+        <input type="radio" name="sexo" id="radio2" value="Femenino" />
+      </strong></td>
+    </tr>
+    <tr>
+      <td><strong>Hobby</strong></td>
+      <td><p>
+        <strong>
+        <label>
+          <input name="musica" type="checkbox" id="CheckboxGroup1_0" value="1" />
+          Musica</label>
+        <br />
+        <label>
+          <input type="checkbox" name="deporte" value="1" 
+          id="CheckboxGroup1_1" />
+          Deportes</label>
+        <br />
+        <label>
+          <input type="checkbox" name="lectura" value="1" id="CheckboxGroup1_2" />
+          Lectura</label>
+        <br />
+        <br />
+      </strong></p></td>
+    </tr>
+    <tr>
+      <td><strong>Correo</strong></td>
+      <td align="center"><input name="correo" type="text" id="correo" size="50" /></td>
+    </tr>
+    <tr>
+      <td><strong>Telefono</strong></td>
+      <td align="center"><input type="text" name="telefono" 
+        id="telefono" /></td>
+    </tr>
+    <tr>
+      <td><strong>Nacionalidad</strong></td>
+      <td align="center"><input type="text" name="nacionalidad" id="nacionalidad" /></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><input type="button" name="Enviar" id="Enviar" value="Enviar" onclick="validacion()" /> &nbsp; &nbsp;&nbsp;&nbsp;   
+        <input type="reset" name="Borrar" id="Borrar" value="Borrar" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

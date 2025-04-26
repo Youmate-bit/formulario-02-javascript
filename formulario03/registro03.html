@@ -1,0 +1,107 @@
+<!--José Sánchez
+	16.179.270-->
+
+<html>
+	<head>
+		<title>
+			Laboratorio 03 - Registro.html
+		</title>
+		
+		<link href="estilo.css" rel="stylesheet" type="text/css">
+		
+		<script language="JavaScript">
+			function Chequear()
+			{
+				with (document.formulario)
+				if ((Login.value == "") || (Clave.value == ""))
+				{
+					alert("Debe llenar ambos campos")
+					return false
+				}
+				else
+				{
+					Logins = new Array('login1','login2','login3')
+					i = 0
+					esta = false
+					while ((i<3) && (!esta))
+					{
+						
+						if(Login.value == Logins[i])
+						{
+							esta = true
+							indice = i
+						}
+						i++
+					}
+					if (!esta)
+					{
+						alert("Login Incorrecto")
+						return false
+					}
+					else
+					{
+						Password = new Array('pass1','pass2','pass3')
+						if (Clave.value != Password[indice])
+						{
+							alert("Password Incorrecto")
+							return false
+						}
+						return true
+					}
+				}
+			}	
+		</script>
+	</head>
+	<body>
+		<div class="Contenedor">
+			<div class="Cabecera">
+			</div>
+			<div class="Cuerpo">
+				<div class="Contenido">
+					<div class="Hueco1">
+					</div>
+					<div class="Centro1">
+						<div class="Hueco2">
+						</div>
+						<div class="Centro2">
+							<form name="formulario" action="formulario.html" method="post" onSubmit="return Chequear()">
+								<table class="Tabla">
+									<tr class="Espacio">  
+										</br>
+									</tr>
+									<tr class="Casilla">
+										<td>
+											<strong class="LetraCasilla">Login:</strong>
+										</td>
+										<td>
+											<input name="Login" type="text" size="32">
+										</td>
+									</tr>
+									<tr class="Casilla">
+										<td>
+											<strong class="LetraCasilla">Password:</strong>
+										</td>
+										<td align="right">
+											<input name="Clave" type="password" size="32">
+										</td>
+									</tr>
+									<tr class="Boton">
+										<td colspan="2">
+											<input type="submit" value="Enviar">
+										</td>
+									</tr>
+								</table>
+							</form>
+						</div>
+						<div class="Hueco2">
+						</div>
+					</div>
+					<div class="Hueco1">
+					</div>
+				</div>
+				<div class="Pie">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escribir - Actualiar - JavaScript</title>
+
+    <script>
+        function actualizar(){
+            document.getElementById("texto").innerHTML=document.form1.campotexto.value;
+        }
+
+        function cambiarImagen(ruta){
+            document.getElementById("postal").src=ruta;
+        }
+
+        function cambiarColor(color){
+            document.getElementById("interior").bgColor=color;
+        }
+    </script>
+
+</head>
+
+<body>
+    <form name="form1">
+    
+    <table border="1" align="center" width="500px">
+        <tr>
+            <td bgcolor="#FFFFFF" id="interior"><img src="imagenes/iphone.png" id="postal"></td>
+            <td align="center" id="texto">Contenido dinamico aqui</td>
+        </tr>
+
+        <tr>
+            <td align="center">
+                <textarea name="campotexto" rows="5" cols="30" onchange="actualizar();" onkeypress="actualizar();">Escriba aqui</textarea>
+            </td>
+
+            <td align="center">
+                <select name="lista" onchange="cambiarImagen(this.value)">
+                    <option value="imagenes/iphone.png">Iphone</option>
+                    <option value="imagenes/ipad.png">Ipad</option>
+                    <option value="imagenes/blackberry.png">Blackberry</option>
+                </select>
+
+                <select name="colores" onchange="cambiarColor(this.value)">
+                    <option value="yellow">Amarillo</option>
+                    <option value="blue">Azul</option>
+                    <option value="#FF0000">Rojo</option>
+                    <option value="#FFFFFF">Blanco</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
